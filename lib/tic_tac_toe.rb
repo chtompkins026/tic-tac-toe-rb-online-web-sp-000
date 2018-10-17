@@ -107,12 +107,11 @@ def over?(board)
 end
 
 def winner (board)
-  index = []
-  index = won?(board)
-  if index == false
+  player_id = won?(board)
+  if player_id == false
     return nil
   else
-    if board[index[0]] == "X"
+    if board[player_id[0]] == "X"
       return "X"
     else
       return "O"
